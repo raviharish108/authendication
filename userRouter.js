@@ -42,7 +42,7 @@ router.post("/login",async(req,res)=>{
         const ispasswordmatch=await bcrypt.compare(password,userformdb.password);
         console.log(ispasswordmatch);
         if(ispasswordmatch){
-            var userToken=jwt.sign({id:userformdb._id},process.env.secretkey)
+            var userToken=jwt.sign({id:userformdb._id},Process.env.secretkey)
             res.header("auth",userToken).json(userToken);
         }
         else{

@@ -3,8 +3,8 @@ import {MongoClient} from "mongodb";
 import {registerrouter} from "./userRouter.js"
 import cors from "cors"
 // const url="mongodb://127.0.0.1:27017";
-const mongo_url=process.env.URL;
-const port=procss.env.PORT;
+const mongo_url= Process.env.URL;
+const port=Procss.env.PORT;
 const app=express();
 app.use(express.json());
 app.use(cors());
